@@ -1,0 +1,173 @@
+$white:     #fff;
+$gray-base: #111111;
+$gray-100:  lighten($gray-base, 85%);
+$gray-200:  lighten($gray-base, 80%);
+$gray-300:  lighten($gray-base, 70%);
+$gray-400:  lighten($gray-base, 60%);
+$gray-500:  lighten($gray-base, 50%);
+$gray-600:  lighten($gray-base, 40%);
+$gray-700:  lighten($gray-base, 30%);
+$gray-800:  lighten($gray-base, 10%);
+$gray-900:  lighten($gray-base, 5%);
+$black:     #000000;
+
+
+$grays: ();
+
+$blue:       #20a8d8;
+$indigo:     #6610f2;
+$purple:     #6f42c1;
+$pink:       #e83e8c;
+$red:        #dc3545;
+$orange:     #fd7e14;
+$yellow:     #ffd260;
+$green:      #28a745;
+$teal:       #20c997;
+$cyan:       #17a2b8;
+
+$colors: ();
+
+$primary:       $black;
+$secondary:     $gray-base;
+$success:       $green;
+$info:          $blue;
+$warning:       $yellow;
+$danger:        $red;
+$bright:        lighten($gray-base, 82%);
+$light:         $gray-200;
+$silver:        lighten($gray-base, 75%);
+$dark:          $gray-900;
+$success-light: lighten($success, 48%);
+$warning-light: lighten($warning, 24.9%);
+$info-light:    lighten($info, 41%);
+$danger-light:  lighten($danger, 37%);
+
+$theme-colors: ();
+
+$theme-colors: map-merge(
+  (
+    "white":           $white,
+    "indigo":          $indigo,
+    "pink":            $pink,
+    "cyan":            $cyan,
+    "bright":          $bright,
+    "silver":          $silver,
+    "success-light":   $success-light,
+    "warning-light":   $warning-light,
+    "info-light":      $info-light,
+    "danger-light":    $danger-light
+  ),
+  $theme-colors
+);
+
+// Social colors ----------
+$color-telegram:      #0088cc;
+$color-facebook:      #3b5998;
+$color-email:         #D44638;
+$color-instagram:     #b3352a;
+$color-linkedin:      #0077B5;
+$color-twitter:       #38A1F3;
+$color-whatsapp:      #4FCE5D;
+$color-stackoverflow: #ffab5c;
+
+// Body ---------
+$body-bg:               $dark;
+$body-color:            $white;
+
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-rounded:                    true;
+$enable-shadows:                    false;
+$enable-gradients:                  false;
+$enable-transitions:                true;
+$enable-print-styles:               true;
+$enable-responsive-font-sizes:      true;
+
+// Printing ---------
+$print-page-size:                   a3;
+
+// Links ---------
+$link-color:                $white;
+$link-decoration:           none;
+$link-hover-color:          $white;
+$link-hover-decoration:     none;
+
+// Spacing -------
+$spacer:                      1rem;
+$grid-gutter-width:           $spacer;
+$breadcrumb-margin-bottom:    $spacer;
+$card-spacer-x:               $spacer;
+
+// Typography ---------
+$font-family-sans-serif: 'Vazir', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$line-height-base:            1.5;
+$line-height-lg:              $line-height-base;
+$line-height-sm:              $line-height-base;
+$headings-line-height:        $line-height-base;
+$headings-margin-bottom:      $spacer;
+
+// Components
+$border-width:                1px;
+$border-color:                $silver;
+
+// Border Radius ---------
+$border-radius:               .25rem;
+$border-radius-lg:            .3rem;
+$border-radius-sm:            .2rem;
+$border-radius-xl:            $spacer;
+
+// Alerts --------
+$alert-border-level:                -6;
+
+// Inputs --------
+$component-active-bg:               $info;
+$input-focus-border-color:          lighten($component-active-bg, 25%);
+$input-border-color:                $border-color;
+$input-group-addon-bg:              $bright;
+$input-group-addon-border-color:    $input-border-color;
+
+// Buttons --------
+$input-btn-padding-y-sm:      $spacer / 4;
+$input-btn-padding-x-sm:      ($spacer / 2 + $spacer / 4);
+$input-btn-padding-y:         $spacer / 2;
+$input-btn-padding-x:         $spacer;
+$input-btn-padding-y-lg:      $spacer / 2;
+$input-btn-padding-x-lg:      $spacer;
+
+// Pagination -----
+$pagination-active-bg:        $primary;
+$pagination-bg:               $white;
+$pagination-focus-box-shadow: none;
+$pagination-color:            $body-color;
+$pagination-border-width:     0;
+$pagination-hover-bg:         $bright;
+
+// Tables -------
+$table-accent-bg:             $bright;
+$table-border-color:          $border-color;
+$table-hover-bg:              $light;
+
+// Transitions
+$transition-base:             all .2s ease-in-out;
+
+// Cards
+$card-cap-bg:                 $bright;
+$card-border-radius:          $border-radius-xl;
+
+// List group
+$list-group-border-color:     $border-color;
+
+// Dropdowns
+$dropdown-link-hover-color:         $body-color;
+$dropdown-link-hover-bg:            $bright;
+$dropdown-link-active-color:        $dropdown-link-hover-color;
+$dropdown-link-active-bg:           $dropdown-link-hover-bg;
+
+// Z-index master list
+
+$zindex-dropdown:                   1000;
+$zindex-sticky:                     1020;
+$zindex-fixed:                      1030;
+$zindex-modal-backdrop:             1040;
+$zindex-modal:                      1050;
+$zindex-popover:                    1060;
+$zindex-tooltip:                    1070;

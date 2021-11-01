@@ -1,42 +1,40 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <sidebar/>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div id="app" class="vh-100">
+    <b-container fluid>
+      <b-row class="vh-100">
+        <b-col
+          order-lg="2"
+          class="d-flex align-items-center"
+        >
+          <router-view/>
+        </b-col>
+
+        <b-col
+          md="3"
+          cols="auto"
+          order-lg="1"
+        >
+          <sidebar class="d-none d-md-block"/>
+
+          <toggle-menu class="d-block d-md-none"/>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 <script>
 import Sidebar from '@/components/Sidebar.vue'
+import ToggleMenu from '@/components/ToggleMenu.vue'
+
 export default {
   name: 'main',
   components: {
+    ToggleMenu,
     Sidebar
   }
 }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+<style lang="scss" src  >
+  @import "assets/scss/style.scss";
 </style>
